@@ -25,7 +25,7 @@ export const equipos = [
 			["REDMI8", "REDMI8A"],
 			["REDMINote9S", "REDMI Note 9 Pro"],
 			["REDMINote10pro", "REDMINote10Lite"],
-			["REDMI9A","Redmi9C"],
+			["REDMI9A","REDMI9C"],
 			["REDMINote7", "Note7Pro", "Note7Plus" ]
 		]
 	}

@@ -7,14 +7,16 @@ function App() {
   const [search, setSearch] = useState('')
  
  
-  const existe = (arr,par)=> arr.includes(par)
+  const existe = (arr,par)=> arr.includes(par.toUpperCase())
   const handlerSubmit = (e) => {
     e.preventDefault()
   }
 const handlerChange = (e) =>{
   setSearch(e.target.value)
   console.log(search)
- 
+  equipos.map(item => item.models.map((model)  => 
+    existe(model, search.toUpperCase())? model.map(md => console.log(md)): ''))
+  
 }
   return (
     <>
@@ -28,11 +30,11 @@ const handlerChange = (e) =>{
           />
         <button>buscar</button>
       </form>
-      {count.map(equipo => equipo.models.map(item => 
+      {/*count.map(equipo => equipo.models.map(item => 
         existe(item, search) ?
           item.map(i => <li key={i}>{i}</li>)
          :
-         ''))}
+      ''))*/}
     </>
   )
 }
